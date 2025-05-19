@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="video-background">
+  <video autoplay muted loop id="bgVideo">
+    <source src="assets/videos/user-registration-bg.mp4" type="video/mp4" />
+  </video>
+  <div class="video-blur-overlay"></div>
+</div>
+
+<div class="container">
+  <div class="registration-box">
+<div class="form-container">
+  <div class="glass-form">
+    <h1>User Registration</h1>
+    <h3><font color="green">{{ form.message }}</font></h3>
+
+    <table class="form-table">
+      <tr>
+        <th align="right">First Name:</th>
+        <td><input type="text" [(ngModel)]="form.data.firstName" class="form-input" /></td>
+      </tr>
+      <tr>
+        <th align="right">Last Name:</th>
+        <td><input type="text" [(ngModel)]="form.data.lastName" class="form-input" /></td>
+      </tr>
+      <tr>
+        <th align="right">Login ID:</th>
+        <td><input type="text" [(ngModel)]="form.data.loginId" class="form-input" /></td>
+      </tr>
+      <tr>
+        <th align="right">Password:</th>
+        <td><input type="password" [(ngModel)]="form.data.password" class="form-input" /></td>
+      </tr>
+      <tr>
+        <th align="right">DOB:</th>
+        <td><input type="date" [(ngModel)]="form.data.dob" class="form-input" /></td>
+      </tr>
+      <tr>
+        <th align="right">Address:</th>
+        <td><input type="text" [(ngModel)]="form.data.address" class="form-input" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <button (click)="signUp()" class="submit-btn">Sign Up</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+  </div>
+</div>
