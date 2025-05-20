@@ -10,4 +10,4 @@ class User(models.Model):
     address = models.CharField(max_length=50)
 
     class Meta:
-        db_table = 'SOS_USER'
+        db_table = 'sos_user'

@@ -10,8 +10,11 @@ class UserService:
             cursor.execute(sql)
             result = cursor.fetchall()
         connection.close()
-        for d in result:
-            pk = d[0]
+        for data in result:
+            if data[0] is not None:
+                pk = data[0]
+        connection.commit()
+        connection.close()
         return pk + 1
 
     def add(self, data):
